@@ -9,7 +9,7 @@ export const StoryItem = ({ story }) => {
       <h2 className="text-black">
         <Link to={`/stories/${story._id}`}>{story.title}</Link>
       </h2>
-      <p className="text-gray">{story.year}</p>
+      <p data-testid="yearly p" className="text-gray">{story.year}</p>
       <Link to={`/stories/${story._id}`}>
         <img src={story.photos[0]} className="storyPicture" alt="" />
       </Link>
