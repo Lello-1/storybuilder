@@ -33,14 +33,14 @@ const Editable = ({
   return (
     <section className="editable-section" {...props}>
       {isEditing ? (
-        <div
+        <div data-testid = "div handleKeyDown"
           onBlur={() => setEditing(false)}
           onKeyDown={(e) => handleKeyDown(e, type)}
         >
           {children}
         </div>
       ) : (
-        <div className={`editable-${type}`} onClick={() => setEditing(true)}>
+        <div data-testid="editable" className={`editable-${type}`} onClick={() => setEditing(true)}>
           <span className={`${text ? 'text-black' : 'text-gray'}`}>
             {text || placeholder || 'Editable content'}
           </span>
