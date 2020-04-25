@@ -60,8 +60,9 @@ export const AddStory = () => {
     <>
       <form onSubmit={createStory}>
         <h1>Add Your Story</h1>
-        <Editable text={title} placeholder="Write a title" type="input">
+        <Editable text={title} placeholder="Write a title" type="input" data-testid = "editable-text">
           <input
+            data-testid = "title-text"
             type="text"
             name="title"
             placeholder="Write a title"
@@ -72,6 +73,7 @@ export const AddStory = () => {
         </Editable>
         <Editable text={year} placeholder="Year" type="input">
           <input
+            data-testid = "year-text"
             type="text"
             name="year"
             placeholder="Describe the story"
@@ -86,6 +88,7 @@ export const AddStory = () => {
           type="textarea"
         >
           <textarea
+            data-testid = "desc-textarea"
             name="description"
             placeholder="Description for the task"
             childref={descriptionRef}
@@ -96,6 +99,7 @@ export const AddStory = () => {
         </Editable>
         <ImageUploader setImages={setImages} />
         <input
+          data-testid = "submit-button"
           type="submit"
           className="submit-story"
           name="Save"
